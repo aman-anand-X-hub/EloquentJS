@@ -29,18 +29,21 @@ class Group {
         }
         return group;
     }
-
+    // [Symbol.iterator] is a special symbol that defines the default iterator for an object. 
     [Symbol.iterator]() {
         return new GroupIterator(this.arr);
     }
 }
 
 class GroupIterator {
-    constructor(members) {
-        this.arr = members;
+    constructor(stream) {
+        this.arr = stream;
         this._position = 0;
     }
 
+    // In the context of iterators, next is a conventional method name that you need to implement for an object to be recognized as an iterator.
+    // done: a boolean indicating whether the iterator has completed.
+    // value: the current value of the iteration (optional if done is true).
     next() {
         if (this._position >= this.arr.length) {
             return { done: true };
