@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+  }
+  
+  .game {
+    position: relative;
+  }
+  
+  .background {
+    border-spacing: 0;
+  }
+  
+  .background td {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .empty {
+    background: white;
+  }
+  
+  .wall {
+    background: black;
+  }
+  
+  .lava {
+    background: red;
+  }
+  
+  .player {
+    background: #f00;
+    position: absolute;
+  }
+  
+  .coin {
+    background: #ff0;
+    position: absolute;
+  }
+  
+  .lava, .coin, .player, .monster {
+    position: absolute;
+  }
+  
+  .monster {
+    background: purple;
+  }
+  
